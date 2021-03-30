@@ -8,3 +8,9 @@ jobs:
       - uses: actions/checkout@v2
 
       - run: echo "my tests"
+
+      - run: sh ci-install-dependencies.sh
+
+      - run: /opt/microchip/mplabx/v5.45/mplab_platform/bin/prjMakefilesGenerator.sh -help
+
+      - run: /opt/microchip/xc32/v2.50/bin/xc32-gcc --help
